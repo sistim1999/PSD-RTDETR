@@ -1,0 +1,34 @@
+# Dataset configuration template for PSD-RTDETR
+# Follows the standard YOLO detection format.
+#
+# Directory structure:
+#   <path>/
+#   ├── train/
+#   │   ├── image1.jpg
+#   │   ├── image2.jpg
+#   │   └── ...
+#   ├── val/
+#   │   └── ...
+#   └── test/        (optional)
+#       └── ...
+#
+# Labels directory (auto-discovered by ultralytics):
+#   Replace "images" with "labels" in the path, e.g.:
+#   <path>/../labels/train/image1.txt
+#
+# Label format (one line per bounding box):
+#   class_id  center_x  center_y  width  height
+#   (all values normalized to [0, 1])
+
+path: /path/to/your/dataset/images/  # root image directory (absolute path)
+train: train    # training subdirectory
+val: val        # validation subdirectory
+test: test      # test subdirectory (optional)
+
+# Number of classes
+nc: 2
+
+# Class names
+names:
+  0: class_a
+  1: class_b

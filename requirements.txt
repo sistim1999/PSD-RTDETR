@@ -1,0 +1,4 @@
+ultralytics==8.0.201
+torch>=1.9
+torchvision
+timm
